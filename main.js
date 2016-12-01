@@ -35,4 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
     block.classList.add("red");
   });
 
+  // attach a click handler to the slide button
+  document.getElementById("slide").addEventListener("click", function(event){
+    event.preventDefault();
+    var block = document.getElementById("block");
+     
+    block.classList.add("slide");
+
+    setTimeout(function(){
+      block.classList.remove("slide");
+    }, 3000);
+  });
+
 });
